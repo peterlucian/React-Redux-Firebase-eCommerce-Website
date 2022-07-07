@@ -1,4 +1,3 @@
-require("dotenv").config()
 import React, { useState, useEffect } from 'react';
 //import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
@@ -13,6 +12,7 @@ import { createStructuredSelector } from 'reselect';
 import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import './styles.scss';
+require("dotenv").config()
 
 const initialAddressState = {
   line1: '',
@@ -144,9 +144,9 @@ const PaymentDetails = () => {
     },
     hidePostalCode: true
   };
-
+	
   const initialOptions = {
-    "client-id": process.env.PAYPAL_CLIENT_ID,
+    "client-id": process.env.REACT_APP_PAYPAL_CLIENT_ID,
     currency: "EUR",
     intent: "capture",
   };

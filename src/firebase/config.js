@@ -1,4 +1,4 @@
 // firebase config
 export const firebaseConfig = {
-    "HERE GOES FIREBASE CONFIG"
+    "HERE GOES YOUR FIREBASE CONFIG"
 };
